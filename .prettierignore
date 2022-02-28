@@ -1,0 +1,12 @@
+# Build artifacts
+/dist
+/node_modules
+/out
+/src/types/**/*.json
+/src/types/**/*.yaml
+/federated-types
+
+# CI code
+/jenkins
+
+/COOKBOOK.md
