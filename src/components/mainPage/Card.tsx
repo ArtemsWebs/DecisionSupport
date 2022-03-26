@@ -1,17 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, Card, CardActions, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
+import { Task } from '../../data/data';
 import { NavLink } from 'react-router-dom';
 
-interface PageСardProps {
-  title?: string;
-  description?: string;
-}
+export interface PageCardProps extends Task {}
 
-const MainCard: React.FC<PageСardProps> = ({ title, description }) => {
+const MainCard: React.FC<PageCardProps> = ({ title, description, id }) => {
   return (
     <CardWrapper>
-      <NavLink to={'/'}>
+      <NavLink to={`/task${id}`}>
         <Card>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
@@ -27,6 +25,8 @@ const MainCard: React.FC<PageСardProps> = ({ title, description }) => {
   );
 };
 
-const CardWrapper = styled.div``;
+const CardWrapper = styled.div`
+  margin: 0 2%;
+`;
 
 export default MainCard;

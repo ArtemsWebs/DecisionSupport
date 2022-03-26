@@ -30,6 +30,7 @@ module.exports = {
     'react/jsx-key': ['error', {
       checkFragmentShorthand: true,
     }],
+    "@typescript-eslint/ban-ts-ignore": "off"
   },
   overrides: [
     {
